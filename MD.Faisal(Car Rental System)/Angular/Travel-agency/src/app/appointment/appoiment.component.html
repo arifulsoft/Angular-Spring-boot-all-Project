@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="login-box">
+        <h2>For Appointment</h2>
+        <form (ngSubmit)="save()">
+          <div class="user-box">
+            
+            <input type="text" name="name" required="" id="name" [(ngModel)]="name">
+            <label for="name">Username</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="f_name" required="" id="f_name" [(ngModel)]="f_name">
+            <label for="f_name">Father's Name</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="age" required="" id="age" [(ngModel)]="age">
+            <label for="age">Age</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="address" required="" id="address" [(ngModel)]="address">
+            <label for="address">Address</label>
+          </div>
+          <div class="user-box">
+            <input type="number" name="p_number" required="" id="p_number" [(ngModel)]="p_number">
+            <label for="p_number">Phone Number</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="password" required="" id="password" [(ngModel)]="password">
+            <label for="password">Password</label>
+          </div>
+          <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </a>
+        </form>
+      </div>
+
+</div>

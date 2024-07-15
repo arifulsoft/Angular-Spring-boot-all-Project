@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-header></app-header>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3 class="text-center">All selected cars</h3>
+      <table class="table stripe">
+        <tr>
+          <th>Serial.no</th>
+          <th>Car Image</th>
+          <th>Car Name</th>
+          <th>Car Number</th>
+          <th>Car Color</th>
+          <th>Car Seating</th>
+          <th>Rent_Per_Day</th>
+          <th>Total Days</th>
+
+          <td>quantity</td>
+          <th style="width: 6rem">Total</th>
+          <th>Activity</th>
+        </tr>
+        <tr *ngFor="let i of getAllcars">
+          <td>{{ i.serial_no }}</td>
+          <td><img src="{{ i.car_image }}" alt="" style="width: 40%" /></td>
+          <td>{{ i.car_name }}</td>
+          <td>{{ i.car_number }}</td>
+          <td>{{ i.car_color }}</td>
+          <td>{{ i.car_seating }}</td>
+
+          <td>{{ i.rent_per_day }}</td>
+          <td></td>
+          <td></td>
+
+          <!-- <td> {{i.quantity}} </td> -->
+          <td></td>
+          <td></td>
+
+          <td><button>Remove</button></td>
+        </tr>
+      </table>
+      <div>
+        <button type="button" class="btn btn-success">Book Here</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <app-footer></app-footer>
+</div>

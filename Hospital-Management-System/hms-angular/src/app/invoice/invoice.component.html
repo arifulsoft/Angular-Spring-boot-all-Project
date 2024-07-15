@@ -1,0 +1,95 @@
+<app-header></app-header>
+<div class="row">
+  <div class="col-md-4">
+   <app-admin-sidebar></app-admin-sidebar>
+  </div>
+  <div class="col-md-7">
+    <div class="container mt-5">
+      <h2 class="text-center">Invoice Form</h2>
+      <form (ngSubmit)="invoice()">
+        <div class="row">
+          <div class="form-group col">
+            <label for="p_id">Patient ID</label>
+            <input type="number" class="form-control" placeholder="Patient ID" id="p_id" name="p_id"  [(ngModel)]="p_id" required>
+          </div>
+          <div class="form-group col">
+            <button type="button" class="btn btn-outline-success search-btn" (click)="searchpatient()">Search</button>
+          </div>
+        </div>
+        
+        
+        <div class="form-group">
+          <label for="p_name">Patient Name</label>
+          <input type="text" class="form-control" id="p_name" name="p_name"  [(ngModel)]="p_name" required>
+        </div>
+        <div class="form-group">
+          <label for="d_id">Doctor ID</label>
+          <input type="text" class="form-control" id="d_id" name="d_id"  [(ngModel)]="d_id" required>
+        </div>
+        <div class="form-group">
+          <label for="age">Patient Age</label>
+          <input type="text" class="form-control" id="age" name="age"  [(ngModel)]="age" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="c_fee">Fees Type</label>
+          
+          <select class="form-select" aria-label="Default select example" name="feestype" [(ngModel)]="feestype">
+            <option selected>Select Service Type</option>
+            <option value="c_fee">Consultant fee</option>
+            <option value="m_bill">Medicine bill</option>
+            <option value="t_charge">Test Bill</option>
+          </select>
+          <label for="c_fee">Bill</label>
+          <input type="number" class="form-control mt-1" id="c_fee" name="fee"  [(ngModel)]="fee" required>
+        </div>
+       
+        <!-- <div class="form-group">
+          <label for="pdbc">Per Day Bed Charge</label>
+          <input type="number" class="form-control" id="pdbc" name="pdbc" [(ngModel)]="pdbc" required>
+        </div>
+        <div class="form-group">
+          <label for="tbc">Total bed Charge</label>
+          <input type="number" class="form-control" id="tbc" name="tbc"  [(ngModel)]="tbc" required>
+        </div> -->
+          <!-- <div class="form-group">
+            <label for="m_bill">Medicine bill</label>
+            <input type="number" class="form-control" id="m_bill" name="m_bill"  [(ngModel)]="m_bill" required>
+          </div> -->
+        <!-- <div class="form-group">
+          <label for="t_charge">Test Charge</label>
+          <input type="number" class="form-control" id="t_charge" name="t_charge" [(ngModel)]="t_charge" required>
+        </div> -->
+        <div class="form-group">
+          <label for="vat">Vat(15%)</label>
+          <input type="number" class="form-control" id="vat" name="vat"  value="{{fee*15/100}}" disabled="">
+        </div>
+        <div class="form-group">
+          <label for="t_amt">Total Amount</label>
+          <input type="number" class="form-control" id="t_amt" name="t_amt"  value="{{fee+fee*15/100}}" required disabled="">
+        </div>
+        <div class="form-group">
+          <label for="discount">Discount(10%)</label>
+          <input type="number" class="form-control" id="discount" name="discount"  value="{{fee*10/100}}" required disabled="">
+        </div>
+        <div class="form-group">
+          <label for="n_amt">Net Amount</label>
+          <input type="number" class="form-control" id="n_amt" name="n_amt" value="{{fee+fee*15/100-fee*10/100}}" required disabled=""> 
+        </div>
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="text" class="form-control" id="date" name="date" [(ngModel)]="date" required>
+        </div>
+        <button type="submit" class="btn btn-primary m btn-center my-3">Submit</button>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
+
+

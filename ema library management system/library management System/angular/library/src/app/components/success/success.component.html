@@ -1,0 +1,38 @@
+<app-otherheader></app-otherheader>
+
+  <h1 style="text-align: center; color: white; background-image: url('https://media.istockphoto.com/id/809971888/photo/night-sky-landscape.webp?b=1&s=170667a&w=0&k=20&c=-1smAP9--twhHyqopksRe3lIORQvO9JaaNWbT1Ra-Is='); height: 100px;">Admin Panel</h1>
+
+
+<div class="container-fluid text-center">
+    <div class="row">
+      <div class="col-3" style="background-image: url('https://media.istockphoto.com/id/809971888/photo/night-sky-landscape.webp?b=1&s=170667a&w=0&k=20&c=-1smAP9--twhHyqopksRe3lIORQvO9JaaNWbT1Ra-Is=');">
+       <div style="margin: 5px;"><button type="button" class="btn btn-light" style="width: 220px;" routerLink="/userupdate"><b><i class="bi bi-search"></i> Search User By ID </b></button></div>
+       <div style="margin: 5px;"><button type="button" class="btn btn-light" style="width: 220px;" routerLink="/showalluserdata"><b><i class="bi bi-view-list"></i> Show All Users</b></button></div>
+       <div style="margin: 5px;"><button type="button" class="btn btn-light" style="width: 220px;" routerLink="/newbookinsert"><b><i class="bi bi-pencil-square"></i> Insert New Book</b></button></div>
+       <div style="margin: 5px;"><button type="button" class="btn btn-light" style="width: 220px;" routerLink="/showborrowbooks"><b><i class="bi bi-book"></i> View All Books</b></button></div>
+       <div style="margin: 5px;"><button type="button" class="btn btn-light" style="width: 220px;" routerLink="/returnbook"><b><i class="bi bi-bookmark-check-fill"></i> Return Books</b></button></div><br>
+       <div style="margin: 5px;"><button type="button" class="btn btn-danger" style="width: 150px;" routerLink="/home"><b><i class="bi bi-box-arrow-left"></i> Log Out</b></button></div>
+       
+
+
+      </div>
+      <div class="col-9">
+        <h1>
+            Welcome
+
+            <router-outlet></router-outlet>
+        
+            {{data.name}}
+            <p><img src="assets/images/200.jpg" height="500px" alt=""> </p>
+
+<br>
+
+
+        </h1>
+      </div>
+
+    </div>
+  </div>
+
+
+  

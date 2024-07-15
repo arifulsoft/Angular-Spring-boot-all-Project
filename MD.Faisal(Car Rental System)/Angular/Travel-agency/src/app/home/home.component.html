@@ -1,0 +1,79 @@
+<div class="container-fluid">
+  <app-header></app-header>
+
+  <!-- ------------------------------ Marquee ---------------------------------- -->
+  <div class="my-2">
+    <marquee class="marq fw-1 text-success h2 shadow">
+      Our main purpose is to make planning a trip easier and more useful for our
+      customers by giving them information and making reservations. . ▸ .com/
+    </marquee>
+  </div>
+  <!-- body -->
+  <div class="row ">
+    <div class="col-4 " >
+      <form (ngSubmit)="search_2()">
+        <div class="form-group">
+          <label for="from">From</label>
+          <select class="form-select" id="from" name="from" [(ngModel)]="from">
+            <option value=""></option>
+            <option value="Dhaka">Dhaka</option>
+            <option value="Chittagong">Chittagong</option>
+            <option value="Cumillah">Cumillah</option>
+            <option value="Noakhali">Noakhali</option>
+            <option value="Sylhet">Sylhet</option>
+          </select>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="to">To</label>
+          <select class="form-select" id="to" name="to" [(ngModel)]="to">
+            <option value="Dhaka">Dhaka</option>
+            <option value="Chittagong">Chittagong</option>
+            <option value="Cumillah">Cumillah</option>
+            <option value="Noakhali">Noakhali</option>
+            <option value="Sylhet">Sylhet</option>
+          </select>
+        </div>
+       
+        <!-- <div class="form-group">
+          <label for="booking_date">Booking Date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="booking_date"
+            placeholder="Password"
+            name="booking_date"
+            [(ngModel)]="booking_date"
+          />
+        </div> 
+        <br> -->
+        
+        <!-- <div class="form-group">
+          <label for="return_date">Return Date</label>
+          <input
+            type="date"
+            class="form-control"
+            id="return_date"
+            placeholder="Password"
+            name="return_date"
+            [(ngModel)]="return_date"
+          />
+        </div> -->
+        <br>
+        <button type="submit"  class="btn btn-primary">
+          Search
+        </button>
+       
+      </form>
+    </div>
+  </div>
+
+  <!-- footer -->
+
+  <div class="container-top">
+    <a href="#" class="top"></a>
+  </div>
+
+  <app-footer></app-footer>
+</div>
+

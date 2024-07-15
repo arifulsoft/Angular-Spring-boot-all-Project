@@ -1,0 +1,75 @@
+<app-otherheader></app-otherheader>
+
+<h1 class="text-center" style="background-color: rgb(208, 168, 245);">Invoice</h1>
+<div class="container mt-5">
+
+    <div class="row m-2">
+        <div class="col-md-7">
+
+            <div class="container">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Number</th>
+                      <!-- <th scope="col">Image</th> -->
+                      <th scope="col">Name</th>
+                      <th scope="col">Book Shelf</th>
+              
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let b of borrowedBookList">
+              
+                      <th scope="row"> {{b.number}} </th>
+                      <!-- <td> <img src="{{b.image}}" width="80px" height="80px" alt=""> </td> -->
+                      <td>{{b.name}} </td>
+                      <td> {{b.bookshelf}} </td>
+                     
+                    </tr>
+              
+                  </tbody>
+                </table>
+                <div class="text-center container">
+                  <label for="id" class="form-label fw-bolder" style="color: red; font-size: large;">User ID</label>
+                  <input type="text" class="form-control ps-3" id="id" name="id"><br>
+                  <label for="date" class="form-label fw-bolder" style="font-size: large;">From Date</label>
+                  <input type="date" class="form-control ps-3" id="date" name="date"><br>
+                  <label for="date" class="form-label fw-bolder" style="font-size: large;">To Date</label>
+                  <input type="date" class="form-control ps-3" id="date" name="date"><br>
+                  <button class="btn btn-success"  (click)="update()">Done</button>
+                 
+                </div>
+              </div>
+        </div>
+        <div class="col-md-3 p-3" style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;">
+
+            <div class="d-flex gap-2 justify-content-around ">
+                <h6>Subtotal</h6>
+                <h6>100 * {{borrowedBookList.length}} = {{100 *borrowedBookList.length}} tk</h6>
+            </div>
+            <!-- <hr> -->
+
+            <!-- <div class="d-flex gap-2 justify-content-around ">
+                <h6>Fine</h6>
+                <h6> {{10*borrowedBookList.length}} </h6>
+                <h6>0 tk</h6>
+            </div> -->
+
+            <hr>
+
+            <div class="d-flex justify-content-around gap-2">
+                <h6>total</h6>
+                <!-- <h6>{{10*borrowedBookList.length+ 50 *borrowedBookList.length}} tk</h6> -->
+                <h6>{{100 *borrowedBookList.length}} tk</h6>
+            </div>
+
+            <hr>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- {{borrowedBookList | json}}
+
+{{borrowedBookList.length | json}} -->

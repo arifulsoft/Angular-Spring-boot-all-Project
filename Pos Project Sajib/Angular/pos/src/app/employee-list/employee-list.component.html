@@ -1,0 +1,26 @@
+
+<div class="row">
+    <div class="col-1">
+        <app-home></app-home>
+      </div>
+    <div class="col-10">
+
+
+        <h2 style="text-align: center;">This is all Employee list</h2>
+    <table class="table ">
+      <tr>
+        <th> Name </th>
+        <th> Phone </th>
+        <th>Email </th>
+        <th>Role</th>>
+      </tr>
+      <tr *ngFor="let i of getalldata ">
+        <td>{{i.name}}</td>
+        <td>{{i.phone}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.role}}</td>
+
+      </tr>
+    </table>
+    </div>
+</div>

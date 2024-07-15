@@ -1,0 +1,72 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-admin-header></app-admin-header>
+  </div>
+
+<div class="row">
+    <div class="col-md-2">
+        <app-admin-sidebar></app-admin-sidebar>
+      </div>
+  <div class="col-md-10">
+    <h3 class="text-center">Request Come For Booking </h3>
+    <table class="table stripe">
+      <tr>
+        
+        <th>NID</th>
+        <th>Full Name</th>
+        <th>Mobile Number</th>
+        <th>From</th>
+       
+        <th>to</th>
+        <th>Car Name</th>
+        <th>Car Number</th>
+        <th>Car Seating</th>
+        <th>Rent Per Day</th>
+        <th>Total Day</th>
+        <th >Total rent</th>
+        
+        <th>Booking date</th>
+        <th>Return Date</th>
+        <th>Advanced Paid</th>
+        <th>Due Payment</th>
+        
+        <th>Activity</th>
+        <th>Activity</th>
+        
+        
+      </tr>
+      <tr *ngFor="let i of getAllBooking">
+      
+      <td>{{i.nid}}</td>
+      <td>{{i.name}}</td>
+      <td>{{i.m_number}}</td>
+      <td>{{i.from}}</td>
+      <td>{{i.to}}</td>
+      <td>{{i.car_name}}</td>
+      <td>{{i.car_number}}</td>
+      <td>{{i.car_seating}}</td>                                                                                                                                                                                                                                                                                                            
+      <td>{{i.rent_per_day}}</td>
+      <td>{{i.total_day}}</td>
+      <td>{{i.amount}}</td>
+      <td>{{i.booking_date}}</td>
+      <td>{{i.return_date}}</td>
+      <td>{{i.advance_payment}}</td>
+      <td>{{i.due}}</td>
+
+
+      <td><button type="button" class="btn btn-primary" (click)="approved(i.nid)">Approved</button></td>
+      <td><button type="button" class="btn btn-danger" (click)="reject(i.nid)">Reject</button></td>
+
+      
+
+
+
+
+      </tr>
+    </table>
+   
+  </div>
+</div>
+</div>
+
+

@@ -1,0 +1,25 @@
+<app-otherheader></app-otherheader>
+<table class="container table stripe">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Password</th>
+        <th>Gender</th>
+        <th>Borrowed Books</th>
+    </tr>
+    <tr *ngFor="let i of getdata">
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.address}}</td>
+        <td>{{i.phone}}</td>
+        <td>{{i.password}}</td>
+        <td>{{i.gender}}</td>
+        <td>{{i.borrowedbook}}</td>
+    </tr>
+</table>
+
+<button type="button"  class="btn btn-danger text-white d-block text-center w-40  m-auto fw-bolder mt-2" routerLink="/success">Back</button>

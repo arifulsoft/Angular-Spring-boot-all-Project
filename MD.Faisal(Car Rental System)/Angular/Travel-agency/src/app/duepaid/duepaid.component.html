@@ -1,0 +1,157 @@
+<br><br><br>
+
+<h1 class="text-center">Payment Process</h1>
+<br><br>
+<div class="row">
+  <div class="col-md-2"></div>
+
+  <div class="col-md-4">
+    <form (ngSubmit)="duepaid()">
+      <div class="mb-3">
+        <label for="nid" class="form-label">NID Number</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nid"
+          name="nid"
+          [(ngModel)]="nid"
+          placeholder="enter your nid"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+  </div>
+
+  <div class="col-md-6">
+    
+  </div>
+</div><br><br><br>
+
+<!-- ----------------------- -->
+<div class="container" style="margin-left: 400px;">
+    <div class="col-sm-3">
+      <div class="col">
+        <div class="row mb-3">
+          <div class="col">
+            <th>Payment Type:</th>
+          </div>
+          <div class="col">
+            <td>{{ paymentType }}</td>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <th>Total Amount:</th>
+          </div>
+          <div class="col">
+            <td>{{ totalamount }}</td>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <th>Advance paid:</th>
+          </div>
+          <div class="col">
+            <td>{{advancepaid}}</td>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <th>Due:</th>
+          </div>
+          <div class="col">
+            <td>{{ due }}</td>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <th>Discount:</th>
+          </div>
+          <div class="col">
+            <td>
+              <div class="mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="Discount"
+                  name="Discount"
+                  [(ngModel)]="Discount"
+                />
+              </div>
+            </td>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <th>Pay Ammount:</th>
+          </div>
+          <div class="col">
+            <td>
+              <div class="mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="payAmmount"
+                  name="payAmmount"
+                  [(ngModel)]="payAmmount"
+                />
+              </div>
+            </td>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <th>Net Sale:</th>
+          </div>
+          <div class="col">
+            <td>{{ netSale }}</td>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <th>Return:</th>
+          </div>
+          <div class="col">
+            <td>{{ return }}</td>
+          </div>
+        </div>
+        <div class="roe mb-3">
+          <button
+            type="submit"
+            class="btn btn-primary col me-3"
+            (click)="calculate()"
+          >
+            Calculate
+          </button>
+          <br>
+          <br>
+          <button
+            type="submit"
+            class="btn btn-primary col"
+            (click)="saleConfirm()"
+          >
+            Confirm
+          </button>
+          <br>
+          <br>
+          <button
+            type="submit"
+            class="btn btn-primary col"
+            (click)="print()"
+          >
+            Print
+          </button>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- {{getData|json}} -->

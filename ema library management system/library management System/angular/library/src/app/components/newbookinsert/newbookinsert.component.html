@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-2">
+  
+      </div>
+      <div class="col-md-8 my-5">
+        <br><br>
+        <h2 class="text-center text-success"><b>New Book Insert Form</b></h2>
+        <div>
+          <div class="container bg-success-subtle p-3 rounded">
+            <form (ngSubmit)="insertnewbook()">
+                <div class="mb-3">
+                  <label for="number" class="form-label">Number</label>
+                  <input type="text" class="form-control" id="number" name="number" [(ngModel)]="number"> 
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name"> 
+                  </div>
+          
+                  <div class="mb-3">
+                    <label for="writer" class="form-label">Writer</label>
+                    <input type="text" class="form-control" id="writer" name="writer" [(ngModel)]="writer"> 
+                  </div>
+          
+                  <div class="mb-3">
+                      <label for="image" class="form-label">Image Address</label>
+                      <input type="text" class="form-control" id="image" name="image" [(ngModel)]="image"> 
+                    </div>
+                    <div class="mb-3">
+                      <label for="categoryid" class="form-label">Stock</label>
+                      <input type="text" class="form-control" id="stock" name="stock" [(ngModel)]="stock"> 
+                    </div>
+                    <div class="mb-3">
+                      <label for="categoryname" class="form-label">Category Name</label>
+                      <input type="text" class="form-control" id="categoryname" name="categoryname" [(ngModel)]="categoryname"> 
+                    </div>
+                    <div class="mb-3">
+                      <label for="bookshelf" class="form-label">Bookshelf Number</label>
+                      <input type="text" class="form-control" id="bookshelf" name="bookshelf" [(ngModel)]="bookshelf"> 
+                    </div>
+                <button type="submit"  class="btn btn-success text-white d-block text-center w-40  m-auto fw-bolder mt-2" >Insert</button>
+                <button type="button"  class="btn btn-danger text-white d-block text-center w-40  m-auto fw-bolder mt-2" routerLink="/success">Back</button>
+              </form>
+          </div>
+        
+        </div>
+      </div>
+      <div class="col-md-2">
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+

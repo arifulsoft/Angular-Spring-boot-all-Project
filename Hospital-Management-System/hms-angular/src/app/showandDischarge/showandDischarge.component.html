@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="row">
+  <div class="col-md-3">
+    <app-admin-sidebar></app-admin-sidebar>
+  </div>
+  <div class="col-md-8">
+
+    <div>
+      <h3 class="text-center">Patient Details & Discharge</h3>
+      <table class="table stripe">
+        <tr>
+          <th>Patient Id</th>
+          <th>Patient Name</th>
+          <th>Department Name</th>
+          <th>Doctor Id</th>
+          <th>Doctor Name</th>
+          <th>NID Number</th>
+          <th>Age</th>
+          <th>Address</th>
+          <th>Phone</th>
+          <th>Problem</th>
+          <th>Action</th>
+    
+        </tr>
+        <tr *ngFor="let i of getallPatient">
+          <td>{{i.p_id}}</td>
+          <td>{{i.p_name}}</td>
+          <td>{{i.dep_name}}</td>
+          <td>{{i.d_id}}</td>
+          <td>{{i.d_name}}</td>
+          <td>{{i.nid}}</td>
+          <td>{{i.age}}</td>
+          <td>{{i.address}}</td>
+          <td>{{i.phone}}</td>
+          <td>{{i.problem}}</td>
+          <td>
+            <button (click)="delete(i.p_id)"><i class="fa-solid fa-user-pen"></i>Discharge</button>
+          </td>
+    
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

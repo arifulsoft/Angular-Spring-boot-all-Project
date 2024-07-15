@@ -1,0 +1,73 @@
+<app-header></app-header>
+<div class="row">
+  <div class="col-md-3">
+    <app-patientsidebar></app-patientsidebar>
+  </div>
+  <div class="col-md-9">
+
+    <div class="container">
+      <h2 class="ml-5 text-center"> Search Prescription</h2>
+      <form (ngSubmit)="viewPrescription()">
+        <label for="p_id">Your Patient ID</label>
+        <input type="text" id="p_id" placeholder="Enter your patient Id" name="p_id" [(ngModel)]="p_id">
+        <button type="submit" class="mt-3">Search</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!------------------- patients appointment details table----------------------->
+<!-- <div class="container mt-5 prescription-container">
+  <div class="prescription-header text-center">
+    <h3>Your Prescription</h3>
+  </div>
+  <div class="row prescription-details">
+    <div class="col-12 text-center"><strong>Patient Id:</strong> {{myPrescription.p_id}}</div>
+  </div>
+  <div class="row prescription-details">
+    <div class="col-4"><strong>Patient Name:</strong> {{myPrescription.p_name}}</div>
+    <div class="col-4"><strong>Doctor Name:</strong> {{myPrescription.d_name}}</div>
+    <div class="col-4"><strong>Problem:</strong> {{myPrescription.problem}}</div>
+  </div>
+  <div class="row prescription-details">
+    <div class="col-4"><strong>Rx:</strong> {{myPrescription.prescription}}</div>
+    <div class="col-4"><strong>Advice:</strong> {{myPrescription.advice}}</div>
+  </div>
+</div> -->
+
+<div class="container mt-5 prescription-container p-4 shadow-sm rounded">
+  <div class="prescription-header text-center mb-4">
+      <h3 class="text-primary">Your Prescription</h3>
+  </div>
+  <div class="row prescription-details mb-3">
+      <div class="col-12 text-center">
+          <strong>Patient Id:</strong> {{myPrescription.p_id}}
+      </div>
+  </div>
+  <div class="row prescription-details mb-3">
+      <div class="col-4">
+          <strong>Patient Name:</strong> {{myPrescription.p_name}}
+      </div>
+      <div class="col-4">
+          <strong>Doctor Name:</strong> {{myPrescription.d_name}}
+      </div>
+      <div class="col-4">
+          <strong>Problem:</strong> {{myPrescription.problem}}
+      </div>
+  </div>
+  <div class="row prescription-details mb-3">
+      <div class="col-6">
+          <strong>Rx:</strong> {{myPrescription.prescription}}
+      </div>
+      <div class="col-6">
+          <strong>Advice:</strong> {{myPrescription.advice}}
+      </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

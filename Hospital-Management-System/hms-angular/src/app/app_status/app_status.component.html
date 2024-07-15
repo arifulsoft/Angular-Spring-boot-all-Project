@@ -1,0 +1,65 @@
+<app-header></app-header>
+<div class="row">
+  <div class="col-md-4">
+    <app-patientsidebar></app-patientsidebar>
+  </div>
+  <!-- <div class="col-md-7">
+
+    <div>
+      <h2 class="text-center"> Appointment Status</h2>
+      <form (ngSubmit)="appStatus()">
+        <label for="p_id"></label>
+        <input type="number" id="p_id" placeholder="Enter your patient Id" name="p_id" [(ngModel)]="p_id"><br>
+        <button type="submit" class="mt-2">Search</button>
+      </form>
+    </div>
+  </div> -->
+    <div class="col-md-7 mx-auto">
+        <div class="appointment-form">
+            <h2 class="text-center">Appointment Status</h2>
+            <form (ngSubmit)="appStatus()">
+                <label for="p_id">Patient ID:</label>
+                <input type="number" id="p_id" placeholder="Enter your patient ID" name="p_id" [(ngModel)]="p_id" required>
+                <button type="submit" class="mt-2">Search</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+<!------------------- patients appointment details table----------------------->
+<div class="container mt-5">
+  <h3 class="text-center"> Appointment details</h3>
+  <table class="table stripe">
+    <tr>
+      <th>Patient ID</th>
+      <th>Patient Name</th>
+      <th>Doctor Name&Id</th>
+      <th>Consultation fee</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>{{allpatient.p_id}}</td>
+      <td>{{allpatient.p_name}}</td>
+      <td>{{allpatient.doc_name}}</td>
+      <td>{{allpatient.c_fee}}</td>
+      <td>{{allpatient.date}}</td>
+      <td>{{allpatient.time}}</td>
+
+      <td>
+        <!-- <button (click)="update(i.username)"><i class="fa-solid fa-user-pen"></i></button>
+        <button (click)="delete(i.p_id)"><i class="fa-solid fa-trash-can"></i></button> -->
+      </td>
+
+    </tr>
+  </table>
+</div>
+
+<app-footer></app-footer>

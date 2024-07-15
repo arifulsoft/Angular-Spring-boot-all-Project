@@ -1,0 +1,25 @@
+<app-otherheader></app-otherheader>
+
+<table class="container table stripe">
+    <tr>
+        <th>Number</th>
+        <th>Name</th>
+        <th>Writer</th>
+        <th>Image</th>
+        <th>Stock</th>
+        <th>Category Name</th>
+        
+    </tr>
+    <tr *ngFor="let i of getData"  [routerLink]="'/bookdetails/'+i.number">
+        <td>{{i.number}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.writer}}</td>
+        <td> <img src="{{i.image}}" width="80px" height="80px" alt=""> </td>
+        <td>{{i.stock}}</td>
+        <td>{{i.categoryname}}</td>
+     
+    </tr>
+</table>
+
+
+<!-- {{getData  | json}} -->

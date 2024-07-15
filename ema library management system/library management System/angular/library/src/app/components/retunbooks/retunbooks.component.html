@@ -1,0 +1,32 @@
+<app-otherheader></app-otherheader>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4 my-5">
+      <br><br>
+      <h2 class="text-center" style="color: green;"><b>Return Borrowed Book</b></h2>
+      <div>
+        <form class=" subtle">
+          <div class="bg-success-subtle p-3 rounded">
+            <div class="mb-3">
+              <label for="number" class="form-label fw-bolder">Book Number</label>
+              <input type="text" class="form-control ps-3" id="number" [(ngModel)]="bookNumber" name="bookNumber">
+            </div>
+            <div class="mb-3">
+              <label for="id" class="form-label fw-bolder">User Id</label>
+              <input type="text" class="form-control ps-3" id="id" name="id"><br>
+              <label for="date" class="form-label fw-bolder" style="font-size: large;">Date</label>
+                  <input type="date" class="form-control ps-3" id="date" name="date"><br>
+            </div>
+          </div>
+          <button type="submit"
+            class="btn btn-success text-white d-block text-center w-50  m-auto fw-bolder mt-2" (click)="returnBook()">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+p{
+    background-color: #0B5ED7;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 5px;
+}
+p i{
+    color: white;
+    font-size: 35px;
+}

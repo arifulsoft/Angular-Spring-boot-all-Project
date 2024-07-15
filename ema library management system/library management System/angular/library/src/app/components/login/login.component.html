@@ -1,0 +1,30 @@
+<app-otherheader></app-otherheader>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4 my-5">
+      <br><br>
+      <h2 class="text-center" style="color: green;"><b>Admin Login</b></h2>
+      <div>
+        <form (ngSubmit)="login()" class=" subtle">
+          <div class="bg-success-subtle p-3 rounded">
+            <div class="mb-3">
+              <label for="id" class="form-label fw-bolder">ID</label>
+              <input type="text" class="form-control ps-3" id="id" name="id" [(ngModel)]="id">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label fw-bolder">Password</label>
+              <input type="text" class="form-control " id="password" name="password" [(ngModel)]="password">
+            </div>
+          </div>
+          <button type="submit"
+            class="btn btn-success text-white d-block text-center w-50  m-auto fw-bolder mt-2">Login</button>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+</div>

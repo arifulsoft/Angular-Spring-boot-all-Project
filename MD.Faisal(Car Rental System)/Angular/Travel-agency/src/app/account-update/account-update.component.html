@@ -1,0 +1,147 @@
+<app-admin-header></app-admin-header>
+<!-- ------------------------------------------------------------------------------------------------ -->
+<div class="row">
+  <div class="col-md-2">
+    <app-admin-sidebar></app-admin-sidebar>
+  </div>
+
+  <div class="col-md-10">
+    <div class="container my-3">
+      <div class="row d-flex justify-content-between">
+        <!-- ---------- account number search -------------- -->
+        <div class="col-md-4 my-5">
+          <br /><br /><br /><br />
+          <h3 class="text-center fw-bolder d-block">Search An Account</h3>
+          <br />
+          <form (ngSubmit)="search()">
+            <div class="mb-3 bg-warning-subtle p-3 rounded">
+              <label for="a_number" class="form-label fw-bolder"
+                >Account Number</label
+              >
+              <input
+                type="text"
+                class="form-control ps-3"
+                id="a_number"
+                name="a_number"
+                [(ngModel)]="a_number"
+                placeholder="enter account number"
+              />
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-outline-danger d-block text-center w-50 m-auto fw-bolder mt-2"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+        <!-- ---------------------- account show and update --------------------------- -->
+
+        <div class="col-md-6 me-5">
+          <div class="container my-2">
+            <h3 class="text-center fw-bolder text-success">
+              Show And Update Account
+            </h3>
+            <br />
+
+            <form (ngSubmit)="update()">
+              <div class="bg-success-subtle p-3 rounded">
+                <div class="mb-3">
+                  <label for="a_number" class="form-label fw-bolder"
+                    >Account Number</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="a_number"
+                    name="a_number"
+                    [(ngModel)]="a_number"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="name" class="form-label fw-bolder">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    [(ngModel)]="name"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="gender" class="form-label fw-bolder"
+                    >Gender</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="gender"
+                    name="gender"
+                    [(ngModel)]="gender"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label fw-bolder">Email</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    [(ngModel)]="email"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="password" class="form-label fw-bolder"
+                    >Password</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                    [(ngModel)]="password"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="phone" class="form-label fw-bolder">Phone</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    [(ngModel)]="phone"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="balance" class="form-label fw-bolder"
+                    >Balance</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="balance"
+                    name="balance"
+                    [(ngModel)]="balance"
+                  />
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-outline-success fw-bolder mt-3 d-block m-auto px-4"
+              >
+                <u>Update</u>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,122 @@
+<div class="container-fluid">
+    <div class="row">
+      <app-header></app-header>
+    </div>
+    </div>
+
+<div class="container">
+  
+<div class="row">
+  
+  <div class="col-md-12">
+    <div class="container my-4">
+      <h3 class="text-center">All selected cars</h3>
+      <table class="table stripe">
+        <tr>
+          <!-- <th class="fw-bolder">Account Number</th> -->
+          <!-- <th>Serial.no</th> -->
+          
+          <th>Car Name</th>
+          <th>Car Number</th>
+          <th>Car Color</th>
+          <th>Car Seating</th>
+          <th>Rent_Per_Day</th>
+          <th>Total Days</th>
+          
+          <!-- <td>quantity</td> -->
+          <th>Total</th>
+          
+        </tr>
+        <tr *ngFor="let i of getAllCars  ">
+          
+          <!-- <td>{{i.serial_no}}</td> -->
+         
+          <td>{{i.car_name}}</td>
+          <td>{{i.car_number}}</td>
+          <td>{{i.car_color}}</td>
+          <td>{{i.car_seating}}</td>
+         
+          <td> {{i.rent_per_day}} </td>
+ <td><input type="number" value="{{i.quantity}}"  #days (change)="i.total= days.value" >{{total_rent}}</td>
+
+           
+           <!-- <td> {{i.quantity}} </td> -->
+          <td><input type="number" value="{{i.rent_per_day * i.total}}" ></td>
+         <!-- days {{days}} -->
+         
+        </tr>
+      </table>
+      
+     
+    </div>
+  </div>
+
+</div>
+    <div class="row">
+    <div class="col-4" >
+<form (ngSubmit)="saveToDatabase()">
+  
+    <div class="mb-3">
+        <label for="rent_per_day" class="form-label">Rent_Per_Day</label>
+        <input type="number" class="form-control" id="rent_per_day" name="rent_per_day" [(ngModel)]="rent_per_day">
+      </div>
+      <div class="mb-3">
+        <label for="days" class="form-label">Total Days</label>
+        <input type="number" class="form-control" id="days" name="days" [(ngModel)]="days" >
+      </div>
+      <div class="mb-3">
+        <label for="total_rent" class="form-label">Total Rent</label>
+        <input type="number" class="form-control" id="total_rent"  [(ngModel)]="total_rent">
+      </div>
+
+
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="name"  name="name" [(ngModel)]="name">
+      </div>
+
+      <div class="mb-3">
+        <label for="nid" class="form-label"> NID</label>
+        <input type="number" class="form-control" id="nid"  name="nid" [(ngModel)]="nid">
+      </div>
+
+      <div class="mb-3">
+        <label for="mobile" class="form-label">Mobile Number</label>
+        <input type="number" class="form-control" id="mobile"  name="mobile" [(ngModel)]="mobile">
+      </div>
+     
+      <div class="mb-3">
+        <label for="from" class="form-label">From</label>
+        <input type="text" class="form-control" id="from" name="from" [(ngModel)]="from">
+      </div>
+      
+      <div class="mb-3">
+          <label for="to" class="form-label">To</label>
+          <input type="text" class="form-control" id="to" name="to" [(ngModel)]="to" >
+          
+        </div>
+        <div class="mb-3">
+            <label for="booking_date" class="form-label">Booking Date</label>
+            <input type="date" class="form-control" id="booking_date" name="booking_date" [(ngModel)]="booking_date" >
+            
+          </div>
+          <div class="mb-3">
+            <label for="return_date" class="form-label">Return Date</label>
+            <input type="date" class="form-control" id="return_date" name="return_date" [(ngModel)]="return_date" >
+            
+          </div>
+          <div class="mb-3">
+            <label for="advance_payment" class="form-label">Advance Payment</label>
+            <input type="text" class="form-control" id="advance_payment" name="advance_payment" [(ngModel)]="advance_payment" >
+            
+          </div>
+   
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+</div>
+</div>
+</div>
+
+{{getAllCars | json}}

@@ -1,0 +1,40 @@
+<!-- <app-otherheader></app-otherheader>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let c of getData">
+      <div class="card h-100">
+        <img src="{{c.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h2>{{c.name}}</h2>
+          <p>{{c.description}}</p>
+          <button type="button" class="btn btn-success">Show</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- assets/images/a1.jpg -->
+  <app-otherheader></app-otherheader>
+
+<table class="container table stripe">
+    <tr>
+        <th>Number</th>
+        <th>Name</th>
+        <th>Writer</th>
+        <th>Image</th>
+        <th>Category ID</th>
+        <th>Stock</th>
+        <th>BookShelf</th>
+        
+    </tr>
+    <tr *ngFor="let c of getData" [routerLink]="'/bookdetails/'+c.number">
+        <td>{{c.number}}</td>
+        <td>{{c.name}}</td>
+        <td>{{c.writer}}</td>
+        <td> <img src="{{c.image}}" width="200px" height="200px" alt=""> </td>
+        <td>{{c.stock}}</td>
+        <td>{{c.categoryname}}</td>
+        <td>{{c.bookshelf}}</td>
+     
+    </tr>
+</table>

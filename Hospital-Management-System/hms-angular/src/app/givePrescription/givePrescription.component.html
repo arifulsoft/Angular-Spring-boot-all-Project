@@ -1,0 +1,70 @@
+<app-header></app-header>
+<div class="row container">
+  <div class="col-md-3">
+    <app-doctor-sidebar></app-doctor-sidebar>
+  </div>
+  <div class="col-md-7">
+    <div class="search-patient-form">
+      <h2 class="text-center mb-4">Search Patient</h2>
+      <form (ngSubmit)="appStatus()">
+        <div class="form-group">
+          <label for="search_p_id">Patient ID</label>
+          <input type="number" id="search_p_id" class="form-control" placeholder="Enter patient ID" name="search_p_id" [(ngModel)]="search_p_id">
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Search</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-5">
+  <h2 class="text-center">Prescription Pad</h2>
+  <form (ngSubmit)="prescribe()">
+    <div class="form-group">
+      <label for="p_id">Patient ID</label>
+      <input type="number" class="form-control" id="p_id" name="p_id" [(ngModel)]="p_id" required>
+    </div>
+    <div class="form-group">
+      <label for="p_name">Patient Name</label>
+      <input type="text" class="form-control" id="p_name" name="p_name" [(ngModel)]="p_name" required>
+    </div>
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input type="number" class="form-control" id="age" name="age" [(ngModel)]="age" required>
+    </div>
+    <div class="form-group">
+      <label for="d_name">Doctor Name</label>
+      <input type="text" class="form-control" id="d_name" name="d_name" [(ngModel)]="d_name" required>
+    </div>
+    <div class="form-group">
+      <label for="problem">Problem</label>
+      <input type="text" class="form-control" id="problem" name="problem" [(ngModel)]="problem" required>
+    </div>
+    <div class="form-group">
+      <label for="prescription">Prescription</label>
+      <input type="text" class="form-control" id="prescription" name="prescription" [(ngModel)]="prescription" required>
+    </div>
+    <!-- <div class="form-floating mt-3">
+      <label for="prescription">Prescription</label><br><br>
+      <textarea  class="form-control"  id="prescription" name="prescription" [(ngModel)]="prescription" required></textarea>
+     
+    </div> -->
+    <div class="form-group">
+      <label for="advice">Advice</label>
+      <input type="text" class="form-control" id="advice" name="advice" [(ngModel)]="advice" required>
+    </div>
+
+    <!-- <div class="form-floating mt-3">
+      <label for="advice">Advice</label><br><br>
+      <textarea type="text" class="form-control"  id="advice" name="advice" [(ngModel)]="advice" required></textarea>
+     
+    </div> -->
+    <div class="form-group">
+      <label for="dep_name">Department Name</label>
+      <input type="text" class="form-control" id="dep_name" name="dep_name" [(ngModel)]="dep_name" required>
+    </div>
+    <button type="submit" class="btn btn-primary my-3">Submit</button>
+  </form>
+</div>
+<app-footer></app-footer>

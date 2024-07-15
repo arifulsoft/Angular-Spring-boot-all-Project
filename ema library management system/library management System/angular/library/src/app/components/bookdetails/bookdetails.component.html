@@ -1,0 +1,45 @@
+<app-otherheader></app-otherheader>
+<div class="container offset-md-3">
+    <div class="card mb-3" style="max-width: 650px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="{{bookDetails.image}}" height="350px" width="80px" class="card-img-top" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h1>{{bookDetails.name}}</h1><br>
+                    <h4>Writer: {{bookDetails.writer}} </h4><br>
+                    <h5 class="card-text">Category: {{bookDetails.categoryname}} </h5><br>
+                    <h2>BookShelf: {{bookDetails.bookshelf}} </h2><br>
+                    <div class="text-center ">
+
+                        <button class="btn btn-success" routerLink="/borrowedDetails"
+                            (click)="addToBorrowList(bookDetails)">Borrow</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="container offset-md-5">
+    <div class="card" style="width: 18rem; height: 11rem;">
+        <img src="{{bookDetails.image}}" height="350px" width="80px" class="card-img-top" alt="...">
+        <div class="card-body">
+            <div class="card-title">
+                <h1>{{bookDetails.name}}</h1><br>
+                <h4>Writer: {{bookDetails.writer}} </h4><br>
+            </div>
+            <h5 class="card-text">Category: {{bookDetails.categoryname}} </h5><br>
+            <h2>BookShelf: {{bookDetails.bookshelf}} </h2><br>
+        </div>
+
+        <div class="text-center ">
+
+            <button class="btn btn-success" routerLink="/borrowedDetails"
+                (click)="addToBorrowList(bookDetails)">Borrow</button>
+        </div>
+    </div>
+</div> -->
+

@@ -1,0 +1,42 @@
+<app-header></app-header>
+<div class="row container">
+<div class="col-md-4">
+  <app-patientsidebar></app-patientsidebar>
+</div>
+
+
+<div class="col-md-4">
+  <h4 class="text-center">Search Doctor</h4>
+  <form>
+<label for="dep_name">Select A Department Name </label>
+<select class="form-select" aria-label="Default select example" #dd (change)="changeDep(dd.value)">
+  <option selected>Select department</option>
+  <option *ngFor="let i of allData; let z= index" [value]="z">{{i.dep_name}}</option>
+</select>
+</form>
+</div>
+
+<div class="col-md-4">
+
+</div>
+
+</div>
+
+<div class="row container row-cols-4 g-4 mt-5 ml-5">
+  <div class="col" *ngFor="let i of data">
+    <div class="card h-100">
+      <img src="{{i.image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Dr. {{i.d_name}}</h5>
+        <h5 class="card-title">Dr. Id :{{i.d_id}}</h5>
+
+        <h6 class="card-title">{{i.dep_name}} Department</h6>
+        <p class="card-title">{{i.specialization}} Specilist</p>
+        <p class="card-title">Experience: {{i.experience}} Years</p>
+        <p class="card-title">Schedule time:{{i.schedule}}</p>
+        <p class="card-title">Fee : {{i.c_fee}} tk</p>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

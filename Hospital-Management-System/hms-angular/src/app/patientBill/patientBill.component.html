@@ -1,0 +1,113 @@
+<app-header></app-header>
+<div class="row">
+  <div class="col-md-4">
+   <app-admin-sidebar></app-admin-sidebar>
+  </div>
+  <div class="col-md-7">
+    <div class="container mt-5">
+      <h2 class="text-center">Payment Form</h2>
+      <form (ngSubmit)="payment()">
+        <div class="form-group col">
+          <label for="p_id">Search By Patient ID</label>
+          <input type="number" class="form-control" placeholder="Enter Patient ID" id="p_id" name="p_id"  [(ngModel)]="p_id" required>
+        </div>
+        <div class="form-group col">
+          <button type="button" class="btn btn-outline-success mt-3 search-btn" (click)="searchpatient()">Search</button>
+        </div>
+          <div class="form-group col">
+            <label for="p_id">Patient ID</label>
+            <input type="number" class="form-control" id="p_id" name="p_id"  [(ngModel)]="p_id" required>
+          </div>
+        
+        
+        <div class="form-group">
+          <label for="p_name">Patient Name</label>
+          <input type="text" class="form-control" id="p_name" name="p_name"  [(ngModel)]="p_name" required>
+        </div>
+     
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="phone" required>
+        </div>
+
+        <div class="form-group">
+          <label for="ad_date">Admission Date</label>
+          <input type="date" class="form-control mt-2" id="ad_date" name="ad_date" [(ngModel)]="ad_date" required (blur)="datecalculation()">
+        </div>
+
+        <div class="form-group">
+          <label for="dis_date">Discharge Date</label>
+          <input type="date" class="form-control mt-2" id="dis_date" name="dis_date" [(ngModel)]="dis_date" required (blur)="datecalculation()">
+        </div>
+        
+        <div class="form-group">
+          <label for="tnad">Total number of admission days</label>
+          <input type="number" class="form-control" id="tnad" name="tnad"  [(ngModel)]="tnad" required disabled>
+        </div>
+
+        <div class="form-group">
+          <label for="ad_amt">Admission Amount</label>
+          <input type="number" class="form-control"  id="ad_amt" name="ad_amt"  [(ngModel)]="ad_amt" required>
+        </div>
+        
+
+        <div class="form-group">
+          <label for="pdbc">Per Day Bed Charge</label>
+          <input type="number" class="form-control" id="pdbc" name="pdbc"  [(ngModel)]="pdbc" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tbc">Total bed Charge</label>
+          <input type="number" class="form-control" id="tbc" name="tbc" value="{{pdbc*tnad}}" [(ngModel)]="tbc" required>
+        </div>
+
+        <div class="form-group">
+          <label for="doc_fee">Doctor Fee</label>
+          <input type="number" class="form-control" id="doc_fee" name="doc_fee"  [(ngModel)]="doc_fee" required>
+        </div>
+
+        <div class="form-group">
+          <label for="m_bill">Medicine Bill</label>
+          <input type="number" class="form-control" id="m_bill" name="m_bill"  [(ngModel)]="m_bill" required>
+        </div>
+
+        <div class="form-group">
+          <label for="t_bill">Test Bill</label>
+          <input type="number" class="form-control" id="t_bill" name="t_bill"  [(ngModel)]="t_bill" required>
+        </div>
+
+        <div class="form-group">
+          <label for="total">Total Amount(Tk)</label>
+          <input type="number" class="form-control" id="total" name="total" value="{{(pdbc*tnad)+ad_amt+doc_fee+m_bill+t_bill}}" [(ngModel)]="total" required>
+        </div>
+
+
+        <div class="form-group">
+          <label for="discount">Discount Amount(%)</label>
+          <input type="number" class="form-control" id="discount" name="discount" placeholder="Enter discount percent" [(ngModel)]="discount" required>
+        </div>
+
+        <div class="form-group">
+          <label for="n_amt">Net Amount(Tk)</label>
+          <input type="number" class="form-control" id="n_amt" name="n_amt" value="{{((pdbc*tnad)+ad_amt+doc_fee+m_bill+t_bill)-(((pdbc*tnad)+ad_amt+doc_fee+m_bill+t_bill)*discount/100)}}" [(ngModel)]="n_amt" required>
+        </div>
+
+  
+          <div class="form-group">
+            <label for="paid">Paid Amount</label>
+            <input type="number" class="form-control" id="paid" name="paid"  [(ngModel)]="paid" required>
+          </div> 
+        <button type="submit" class="btn btn-primary m btn-center my-3">Pay Bill</button>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<br><br>
+<!-- {{getdata|json}} -->
+
+<app-footer></app-footer>
+
+
+

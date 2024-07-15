@@ -1,0 +1,94 @@
+<div class="row container-fluid" style="background-color: green; height:100px;">
+    <div class="col">
+        <img src="assets/images/logo1.jpg" width="120" height="70" class="d-inline-block align-text-top"
+            style="margin-top: 15px; margin-left: 30px;">
+    </div>
+    <div class="col">
+        <h1 style="color: white; margin-left:-250px; margin-top: 15px;">Library Management System</h1>
+    </div>
+</div>
+
+<!---------------------------------navbar-------------------------------->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid" style="background-color: rgb(231, 216, 202);">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" routerLink="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" routerLink="/about">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Login
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="/login">Admin Login</a></li>
+                    </ul>
+                </li>
+                <button type="button" class="btn btn-outline-success" routerLink="/registration">Registration</button>
+            </ul>
+            <form class="d-flex" role="search" (ngSubmit)="searchbook()">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="bname"
+                    name="bname" [(ngModel)]="bname">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- ------------------------------ Marquee ---------------------------------- -->
+<div class="my-2 ">
+
+    <marquee class="marq  fw-bolder h3 shadow" style="color: green;">Books are important for the mind, heart, and soul.
+        "Books are mirrors: You only see in them what you already have inside you." – Carlos Ruiz Zafón, The Shadow of
+        the Wind.
+    </marquee>
+
+</div>
+
+<!------------------------------------------- carosol part------------------------- -->
+<form class="container">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="assets/images/1.jpg" class="d-block w-100" style="height: 600px;" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="assets/images/2.jpg" class="d-block w-100" style="height: 600px;" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="assets/images/3.jpg" class="d-block w-100" style="height: 600px;" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="assets/images/4.jpg" class="d-block w-100" style="height: 600px;" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="assets/images/5.jpg" class="d-block w-100" style="height: 600px;" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+</form><br><br>
+
+
+<!-- 
+{{getdata|json}} -->

@@ -1,0 +1,26 @@
+
+<div style="background-color: rgb(27, 95, 27); height: 80px; color: white; text-align: center;">
+    <h1>Categories Books</h1>
+    </div>
+
+
+<div class="row row-cols-1 row-cols-md-4 g-4" style="padding-left: 100px; padding-right: 100px; padding-top: 50px;">
+    <div class="col" *ngFor="let c of alldata">
+      <div class="card h-100">
+        <img src="{{c.images}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h2>{{c.name}}</h2>
+          <p><small>{{c.description}}</small></p>
+          <button type="button" class="btn btn-success" (click)="serachcatg(c.name)" ><small>Show All {{c.name}} Books</small></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- [routerLink]="'/mysterybooks/'+c.id" -->
+
+  
+<!-- {{getData|json}} -->
+
+
+

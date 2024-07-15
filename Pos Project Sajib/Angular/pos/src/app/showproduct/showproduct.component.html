@@ -1,0 +1,46 @@
+
+<div class="row">
+
+
+  <div class="col-1">
+    <app-home></app-home>
+  </div>
+  
+  <div class="col-10">
+    <h2 style="text-align: center;">This is all product list</h2>
+    <table class="table table-striped">
+      <tr>
+        <th> ID </th>
+        <th> Barcode </th>
+        <th>Product Name</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Purchashe Price</th>
+        <th>Sales Price</th>
+        <th>Size</th>
+        <th>Category</th>
+        <th>Colors</th>
+        <th>Stock</th>
+        <th>Supplier</th>
+      </tr>
+      <tr *ngFor="let i of getalldata">
+        <td>{{i.id}}</td>
+        <td>{{i.barcode}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.description}}</td>
+        <td>{{i.quantity}}</td>
+        <td>{{i.purchase_rate}}</td>
+        <td>{{i.sales_rate}}</td>
+        <td>{{i.size}}</td>
+        <td>{{i.category}}</td>
+        <td>{{i.colors}}</td>
+        <td>{{i.stock}}</td>
+        <td> {{i.supplier}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+
+<!-- {{getalldata|json}} -->

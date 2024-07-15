@@ -1,0 +1,87 @@
+
+<div class="invoice">
+    <header class="header">
+        <h1>Dream Care Hospital Ltd</h1>
+        <h2>Invoice</h2>
+    </header>
+
+    <section class="info-section bordered">
+        <div class="row">
+            <div class="col-md-6">Patient ID:</div>
+            <div class="col-md-6">{{allpatientdata.p_id}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">Patient Name:</div>
+            <div class="col-md-6">{{allpatientdata.p_name}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">Phone Number:</div>
+            <div class="col-md-6">{{allpatientdata.phone}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">Admission Date:</div>
+            <div class="col-md-6">{{allpatientdata.ad_date}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">Discharge Date:</div>
+            <div class="col-md-6">{{allpatientdata.dis_date}}</div>
+        </div>
+    </section>
+
+    <table class="table invoice-table">
+        <thead>
+            <tr>
+                <th>Description</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Total Admission Days</td>
+                <td>{{allpatientdata.tnad}}</td>
+            </tr>
+            <tr>
+                <td>Admission Amount</td>
+                <td>{{allpatientdata.ad_amt}}</td>
+            </tr>
+            <tr>
+                <td>Per Day Bed Charge</td>
+                <td>{{allpatientdata.pdbc}}</td>
+            </tr>
+            <tr>
+                <td>Total Bed Charge</td>
+                <td>{{allpatientdata.tbc}}</td>
+            </tr>
+            <tr>
+                <td>Doctor Fee</td>
+                <td>{{allpatientdata.doc_fee}}</td>
+            </tr>
+            <tr>
+                <td>Medicine Bill</td>
+                <td>{{allpatientdata.m_bill}}</td>
+            </tr>
+            <tr>
+                <td>Diagnostic Bill</td>
+                <td>{{allpatientdata.t_bill}}</td>
+            </tr>
+            <tr>
+                <td>Discount</td>
+                <td>{{allpatientdata.discount}}</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total Bill</td>
+                <td>{{allpatientdata.total}}</td>
+            </tr>
+            <tr>
+                <td>Net Amount</td>
+                <td>{{allpatientdata.n_amt}}</td>
+            </tr>
+            <tr>
+                <td>Paid Amount</td>
+                <td>{{allpatientdata.paid}}</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>

@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="row">
+  <div class="col-md-4">
+    <app-doctor-sidebar></app-doctor-sidebar>
+  </div>
+
+  <div class="col-md-6">
+    <h2 class="ml-5 text-center">
+      <i class="fas fa-search"></i> Search Admitted Patient
+    </h2>
+    <form class="patient-search-form" (ngSubmit)="searchPatient()">
+      <label for="d_id">Doctor ID:</label>
+      <input type="text" id="d_id" placeholder="Enter doctor ID" name="d_id" [(ngModel)]="d_id">
+      <button class="btn-center" type="submit">Search</button>
+    </form>
+  </div>
+  
+  
+</div>
+
+
+
+<!-- ---------------------------------------------- -->
+<div class="container">
+  <h3 class="text-center" >Admitted Patients Details</h3>
+  <table class="table table-striped">  <tr>
+      <th>Patient Id</th>
+      <th>Patient Name</th>
+      <th>Age</th>
+      <th>Problem</th>
+      <th>Actions</th>  </tr>
+    <tr *ngFor="let i of allpatient">
+      <td>{{i.p_id}}</td>
+      <td>{{i.p_name}}</td>
+      <td>{{i.age}}</td>
+      <td>{{i.problem}}</td>
+      <td>
+        <!-- <button (click)="update(i.username)"><i class="fas fa-user-pen"></i></button>
+        <button (click)="delete(i.p_id)"><i class="fas fa-trash-can"></i></button> -->
+      </td>
+    </tr>
+  </table>
+</div>
+
+<app-footer></app-footer>
+

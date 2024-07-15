@@ -1,0 +1,92 @@
+<div class="container">
+    <div>
+        <!-- {{accountsDetails|json}} -->
+        <div class="d-flex justify-content-end">
+            <a type="submit" class="btn btn-outline-success me-3" (click)="changeService('accounts')">Accounts</a>
+            <a type="submit" class="btn btn-outline-primary" (click)="changeService('transaction')">Transaction</a>
+        </div>
+    </div>
+    <div>
+        <ng-template [ngIf]="service=='accounts'">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">SL.NO</th>
+                        <th scope="col">Account No</th>
+                        <th scope="col">Account Type</th>
+                        <th scope="col">Balance</th>
+                    </tr>
+                </thead>
+                <!-- { "accId": 1, "acc_no": "20240712", "acc_type": "main", "debit": 0, "credit": 4991.1, "balance": 4991.1 } -->
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>{{accountsDetails.acc_no}}</td>
+                        <td>{{accountsDetails.acc_type|titlecase}}</td>
+                        <td>{{accountsDetails.balance}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </ng-template>
+        <ng-template [ngIf]="service=='transaction'">
+            <!-- <h5>Hello Transaction</h5> -->
+            <!-- {{transactionData|json}} -->
+             <!-- {{showTransactionData|json}} -->
+            <div>
+                <form action="" (ngSubmit)="getTransactainData()">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label for="startDate">From Date </label>
+                            <input type="date" class="form-control" id="startDate" name="startDate"[(ngModel)]="startDate">
+                        </div>
+                        <div class="col-md-3">
+                            <label for="endDate">To Date </label>
+                            <input type="date" class="form-control" id="endDate" name="endDate"[(ngModel)]="endDate">
+                        </div>
+                        <div class="col-md-3">
+                                <button type="submit" class="btn btn-success mt-4" >Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">SL.NO</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Invoice No</th>
+                            <th scope="col">Purpose</th>
+                            <th scope="col">Credit</th>
+                            <th scope="col">Debit</th>
+                            <th scope="col">Balance</th>
+                        </tr>
+                    </thead>
+                    <!-- { transactionId: 1, transactionDate: "2024-07-12", invoice_no: "20240711033102", purpose: "Sale", credit: 0,debit: 0, balance: 0 } -->
+                    <tbody>
+                        <tr *ngFor="let i of showTransactionData; let z=index">
+                            <th scope="row">{{z+1}}</th>
+                            <td>{{i.transactionDate}}</td>
+                            <td>{{i.invoice_no}}</td>
+                            <td>{{i.purpose}}</td>
+                            <td>{{i.credit}}</td>
+                            <td>{{i.debit}}</td>
+                            <td>{{i.balance}}</td>
+                        </tr>
+                        <tr >
+                            <th scope="row" colspan="2">Total</th>
+                            <!-- <td>{{i.transactionDate}}</td> -->
+                            <td></td>
+                            <td></td>
+                            <td>{{totalCredit}}</td>
+                            <td>{{totalDebit}}</td>
+                            <td>{{balance}}</td>
+                        </tr>
+    
+                    </tbody>
+                </table>
+            </div>
+        </ng-template>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<app-header></app-header>
+<div class="container">
+  <h1>Find a Doctor</h1>
+
+  <label for="department">Choose a department:</label>
+  <select [(ngModel)]="selectedDepartment" name="department" id="department">
+    <option *ngFor="let department of departments" [value]="department">{{ department }}</option>
+  </select>
+
+  <label for="search">Search for a doctor:</label>
+  <input type="text" [(ngModel)]="searchQuery" name="search" id="search" placeholder="Enter doctor's name">
+
+  <button (click)="searchDoctor()">Search</button>
+</div>
+<app-footer></app-footer>

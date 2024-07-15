@@ -1,0 +1,162 @@
+
+<!-- {{getdata|json}} -->
+
+<div class="row ">
+  <div class="col-1">
+    <app-home></app-home>
+  </div>
+  <div class="col-10">
+
+    <div class="row row2">
+      <div class="col-3 search">
+        <h5>Search Your Product</h5>
+        <form (ngSubmit)="search()">
+          <div class="mb-3">
+            <label for="barcode" class="form-label">Search By Barcode: </label>
+            <input type="number" class="form-control" placeholder="Type your barcode" id="barcode" name="barcode"
+              [(ngModel)]="barcode">
+          </div>
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+      </div>
+      <div class="col-9">
+        <table class="table table-striped">
+          <tr>
+            <th> Barcode </th>
+            <th>Product Name</th>
+            <th>Sales Price</th>
+            <th>Colors</th>
+            <th>Stock</th>
+            <th>Quantity</th>
+            <th>Select</th>
+          </tr>
+          <tr *ngFor="let i of getdata">
+            <td>{{i.barcode}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.sales_rate}}</td>
+            <td>{{i.colors}}</td>
+            <td>{{i.stock}}</td>
+            <td>
+              <div class="mb-3" style="background-color:rgb(240, 244, 245)">
+                <input type="number" class="form-control " id="exampleInputEmail1" style="width: 3.5rem;"
+                  name="orderQuantity" [(ngModel)]="orderQuantity" >
+              </div>
+            </td>
+            <td >
+              <i style="background-color: rgb(240, 244, 245); font-size: 33px;" class="bi bi-check-lg" type="button" (click)="multiwork()"></i>
+            </td>
+          </tr>
+        </table>
+      </div>
+     
+    </div>
+    <div class="row ">
+      <div class="col-9 row1">
+        <table class="table table-striped">
+          <tr>
+            <th> Barcode </th>
+            <th>Product Name</th>
+            <th>Sales Price</th>
+            <th>Colors</th>
+            <th>Quantity</th>
+            <th>Total Price</th>
+  
+          </tr>
+          <tr *ngFor="let i of showOrders">
+            <td>{{i.barcode}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.sales_rate}}</td>
+            <td>{{i.colors}}</td>
+            <td>{{i.quantity}}</td>
+            <td>{{i.total}}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-sm-3 calcu">
+        <div class="col">
+          <div class="row mb-3">
+            <div class="col">
+              <th>Transection Id: </th>
+            </div>
+            <div class="col">
+              <td> {{transectionId}} </td>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <th>Payment Type: </th>
+            </div>
+            <div class="col">
+              <td> {{paymentType}} </td>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <th>Gross Sale: </th>
+            </div>
+            <div class="col">
+              <td> {{GrossSale}} </td>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <th>Discount: </th>
+            </div>
+            <div class="col">
+              <td> 
+                <div class="mb-3">
+                  <input type="number" class="form-control " id="Discount" 
+                  name="Discount" [(ngModel)]="Discount">
+                </div>
+             </td>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <th>Net Sale:</th>
+            </div>
+            <div class="col">
+              <td> {{netSale}} </td>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <th>Pay Ammount: </th>
+            </div>
+            <div class="col">
+              <td>
+                <div class="mb-3">
+                  <input type="number" class="form-control " id="payAmmount" 
+                  name="payAmmount" [(ngModel)]="payAmmount">
+                </div>
+              </td>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <th>Return: </th>
+            </div>
+            <div class="col">
+              <td> {{return}} </td>
+            </div>
+          </div>
+          <div class="roe mb-3">
+            <button type="submit" class="btn btn-primary col me-3" (click)="calculate()">Calculate</button>
+            <button type="submit" class="btn btn-primary col" (click)="saleConfirm()">Sale</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+    
+
+</div>
+
+
+
+
+
+
+

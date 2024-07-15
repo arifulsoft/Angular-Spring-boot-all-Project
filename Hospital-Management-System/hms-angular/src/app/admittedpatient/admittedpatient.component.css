@@ -1,0 +1,70 @@
+/* Add this to your stylesheet */
+.patient-search-form {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .patient-search-form label {
+    font-weight: bold;
+  }
+  
+  .patient-search-form input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+  
+  .patient-search-form button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .patient-search-form button:hover {
+    background-color: #0056b3;
+  }
+  .btn-center {
+    display: block;
+    margin: 0 auto;
+  }
+  .table {
+    width: 100%;  /* Set table to full width */
+    border-collapse: collapse;  /* Remove borders between cells */
+  }
+  
+  .table th,
+  .table td {
+    padding: 15px;  /* Add padding for better spacing */
+    border: 1px solid black;
+
+  }
+  
+  .table thead th {
+    background-color: #eee;  /* Light background for header row */
+  }
+  
+  .table tr:nth-child(even) {
+    background-color: #f2f2f2;  /* Alternate row background color */
+  }
+  
+  .table button {
+    background-color: transparent;  /* Transparent background for buttons */
+    border: none;  /* Remove button borders */
+    cursor: pointer;  /* Set cursor to pointer on hover */
+    color: #333;  /* Button text color */
+    margin-right: 5px;  /* Add margin between buttons */
+  }
+  
+  .table button:hover {
+    color: #007bff;  /* Change button text color on hover */
+  }
+  

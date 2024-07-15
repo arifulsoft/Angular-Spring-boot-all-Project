@@ -1,0 +1,56 @@
+<div class="row">
+
+
+  <div class="col-2">
+    <app-home></app-home>
+  </div>
+
+  <div class="col-8" style="background-color: antiquewhite; border-radius: 10px;">
+    <h2 style="text-align: center;">This is All Inventory</h2>
+    <table class="table">
+      <tr>
+
+        <th>Barcode</th>
+        <th>Product Name</th>
+        <th>Purchse Rate</th>
+        <th>Sales Rate</th>
+        <th>Size</th>
+        <th>Colors</th>
+        <th>Stock</th>
+        <th>Supplier</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let i of getalldata">
+        <td>{{i.barcode}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.purchase_rate}}</td>
+        <td>{{i.sales_rate}}</td>
+        <td>{{i.size}}</td>
+        <td>{{i.colors}}</td>
+        <td>{{i.stock}}</td>
+        <td>{{i.supplier}}</td>
+        <td>
+          <button type="button" class="btn btn-success" (click)="search(i.barcode)">Purchse</button>
+          <button class="btn btn-danger">Delete</button>
+        </td>
+
+      </tr>
+    </table>
+    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+      <button type="submit" class="btn btn-primary" routerLink="/addProduct">New Purchase</button>
+    </div>
+  </div>
+</div>
+
+<!-- <div>
+  <input type="radio" class="btn-check" name="temp" id="1" autocomplete="off" checked value="Purchase"
+    [(ngModel)]="temp">
+  <ng-template [ngIf]="temp=='Purchase'">
+    <label for="1" class="btn btn-outline-success me-2">Purchase</label>
+
+    <p>this is</p>
+  </ng-template> 
+</div> -->
+
+
+<!-- {{getalldata|json}} -->

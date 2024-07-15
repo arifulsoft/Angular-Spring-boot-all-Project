@@ -1,0 +1,74 @@
+<app-header></app-header>
+<div class="row">
+  <div class="col-md-3">
+    <app-admin-sidebar></app-admin-sidebar>
+  </div>
+  <div class="col-md-9">
+
+    <form (ngSubmit)="admission()" class="container">
+      <h4 class="text-center">Patient Admission Form</h4>
+      <div class="form-group">
+        <label for="date">Select Date</label>
+        <input type="date" class="form-control" id="date" name="date" placeholder="Select Date" [(ngModel)]="date" required>
+      </div>
+      <div class="form-group">
+        <label for="p_name">Patient Name</label>
+        <input type="text" class="form-control" id="p_name" name="p_name" placeholder="Enter your name" [(ngModel)]="p_name" required>
+      </div>
+    
+      <div class="form-group">
+        <label for="dep_name">Select Department Name</label>
+        <select class="form-select" aria-label="Default select example" #dd (change)="changeDep(dd.value)" id="dep_name" name="dep_name" [(ngModel)]="dep_name" required>
+          <option selected>Select Department</option>
+          <option *ngFor="let i of allData; let z= index" [value]="z">{{i.dep_name}}</option>
+        </select>
+      </div>
+    
+      <div class="form-group">
+        <label for="d_id">Doctors Id:</label>
+        <select class="form-select" aria-label="Default select example" id="d_id" name="d_id" [(ngModel)]="d_id" required>
+          <option selected>Select a Doctor ID</option>
+          <option *ngFor="let i of data">{{i.d_id}}</option>
+        </select>
+      </div>
+    
+      <div class="form-group">
+        <label for="d_name">Doctors Name</label>
+        <select class="form-select" aria-label="Default select example" id="d_name" name="d_name" [(ngModel)]="d_name" required>
+          <option selected>Select a Doctor Name</option>
+          <option *ngFor="let i of data">{{i.d_name}}</option>
+        </select>
+      </div>
+    
+      <div class="form-group">
+        <label for="nid">NID Number</label>
+        <input type="text" class="form-control" id="nid" name="nid" placeholder="Enter your NID number" [(ngModel)]="nid" required>
+      </div>
+    
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="text" class="form-control" id="age" name="age" placeholder="Enter Age" [(ngModel)]="age" required>
+      </div>
+    
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea class="form-control" id="address" name="address" placeholder="Enter your address" [(ngModel)]="address" required></textarea>
+      </div>
+    
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" [(ngModel)]="phone" required>
+      </div>
+    
+      <div class="form-group">
+        <label for="problem">Problem</label>
+        <textarea class="form-control" id="problem" name="problem" placeholder="Enter your problem" [(ngModel)]="problem" required></textarea>
+      </div>
+    
+      <button type="submit" class="btn btn-primary my-3">Confirm Admission</button>
+    </form>
+    
+    
+  </div>
+</div>
+<app-footer></app-footer>

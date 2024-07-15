@@ -1,0 +1,24 @@
+
+<div class="row" >
+    <div class="col-2">
+        <app-home></app-home>
+      </div>
+    <div class="col-6">
+
+
+        <h2 style="text-align: center;">Access Rights</h2>
+    <table class="table  " style="background-color: bisque;">
+      <tr>
+        <th>Id </th>
+        <th> Name </th>
+        <th>Role</th>
+      </tr>
+      <tr *ngFor="let i of getalldata ">
+        <td>{{i.id}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.role}}</td>
+
+      </tr>
+    </table>
+    </div>
+</div>

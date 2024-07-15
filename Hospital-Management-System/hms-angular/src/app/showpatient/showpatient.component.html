@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div class="row">
+  <div class="col-3">
+    <app-admin-sidebar></app-admin-sidebar>
+  </div>
+  <div class="col-9">
+    <div>
+      <h3 class="text-center" >Patient's Pending Applications</h3>
+      <table class="table">
+        <thead>  <tr>
+            <th>NID Number</th>
+            <th>Patient Name</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Problem</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>  <tr *ngFor="let i of allpatient" [class.alt-row]="i % 2 === 1">  <td>{{i.nid}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.address}}</td>
+            <td>{{i.phone}}</td>
+            <td>{{i.problem}}</td>
+            <td>
+              <button (click)="approve(i.nid)"><i class="fas fa-check"></i>Approve</button>
+              <button (click)="reject(i.nid)"><i class="fas fa-times"></i>Reject</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
+
+
+

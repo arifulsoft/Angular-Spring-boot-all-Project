@@ -1,0 +1,54 @@
+<div class="row">
+    <div class="col-md-3">
+  
+    </div>
+  
+    <div class="col-md-6">
+      <div class="container my-5">
+        <h3 class="text-center fw-bolder">For Table Booking</h3><br>
+  
+        <form (ngSubmit)="booking()">
+          <div class="bg-success-subtle p-3 rounded">
+            
+            <div class="mb-3">
+              <label for="name" class="form-label fw-bolder">Name</label>
+              <input type="text" class="form-control" id="name" name="name" [(ngModel)]="name" placeholder="enter your name">
+            </div>
+  
+            <div class="mb-3">
+                <label for="phone_number" class="form-label fw-bolder">Phone Number</label>
+                <input type="number" class="form-control" id="phone_number" name="phone_number" [(ngModel)]="phone_number" placeholder="enter your phone">
+              </div>
+    
+              <div class="mb-3">
+                <label for="table_type" class="form-label fw-bolder">Table Types</label>
+                <input type="text" class="form-control" id="table_type" name="table_type" [(ngModel)]="table_type" placeholder="enter your phone">
+              </div>
+  
+            <div class="mb-3">
+              <label for="booking_date" class="form-label fw-bolder">Booking Date</label>
+              <input type="date" class="form-control" id="booking_date" name="booking_date" [(ngModel)]="booking_date" placeholder="enter your booking date">
+            </div>
+  
+           
+            <div class="mb-3">
+              <label for="booking_time" class="form-label fw-bolder">Booking time</label>
+              <input type="text" class="form-control" id="booking_time" name="booking_time" [(ngModel)]="booking_time" placeholder="enter your balance">
+            </div>
+  
+            <div class="mb-3">
+              <label for="message" class="form-label fw-bolder">For Any Query </label>
+              <textarea class="form-control" id="message" name="message" [(ngModel)]="message" placeholder="enter your balance">gjh</textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-outline-primary fw-bolder mt-3 d-block m-auto px-5">Submit</button>
+          
+        </form>
+  
+      </div>
+    </div>
+  
+    <div class="col-md-3">
+  
+    </div>
+  </div>

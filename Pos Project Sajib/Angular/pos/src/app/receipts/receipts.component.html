@@ -1,0 +1,31 @@
+
+<div class="row">
+
+
+    <div class="col-3">
+    </div>
+    
+    <div class="col-6">
+      <h2 style="text-align: center;">Sales Success. Here is Invoice</h2>
+      <table class="table table-striped">
+        <tr>
+          <th>Transection Id</th>
+          <th>Payment Type</th>
+          <th>Gross Sales</th>
+          <th>Discout</th>
+          <th>Net Sales</th>
+        </tr>
+        <tr *ngFor="let i of getallTransection">
+          <td>{{i.transectionId}}</td>
+          <td>{{i.paymentType}}</td>
+          <td>{{i.grossSales}}</td>
+          <td>{{i.discount}}</td>
+          <td>{{i.netSales}}</td>
+        </tr>
+      </table>
+      <div class="text-center">
+        <button type="button" class="btn btn-success" (click)="print()">Print</button>
+
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,64 @@
+<app-header></app-header>
+<div class="row">
+  <div class="col-md-3">
+   <app-admin-sidebar></app-admin-sidebar>
+  </div>
+  <div class="col-md-6">
+    <div class="container mt-5">
+      <h2 class="text-center">Patient Bill</h2>
+      <h5>Total admission days : {{admissionday}}</h5>
+      <div class="row">
+        <div class="form-group col">
+          <label for="p_id">Patient ID</label>
+          <input type="number" class="form-control" id="p_id" placeholder="Enter patient Id" name="p_id"  [(ngModel)]="p_id" required>
+        </div>
+        <div class="form-group col">
+          <label for="dis_date">Discharge Date</label>
+          <input type="date" class="form-control" id="dis_date" name="dis_date"  [(ngModel)]="dis_date" required>
+        </div>
+        <div class="col">
+          <button  class="btn btn-primary" (click)="search()">Search</button>
+        </div>
+      </div>
+    
+      <form (ngSubmit)="bill()">
+        
+        
+        <div class="form-group">
+          <label for="ad_date">Admission Date</label>
+          <input type="date" class="form-control" id="ad_date" name="ad_date"  [(ngModel)]="ad_date" required disabled="">
+        </div>
+        
+        <div class="form-group">
+          <label for="t_charge">Total Charge</label>
+          <input type="number" class="form-control" id="t_charge" name="t_charge"  [(ngModel)]="t_charge" required disabled="">
+        </div>
+        <div class="form-group">
+          <label for="t_chargewithbed">Total Charge With Bed</label>
+          <input type="number" class="form-control" id="t_chargewithbed" name="t_chargewithbed"  [(ngModel)]="t_chargewithbed" required disabled="">
+        </div>
+        <div class="form-group">
+          <label for="paid">Paid Amount</label>
+          <input type="number" class="form-control" id="paid" name="paid" [(ngModel)]="paid" required disabled="">
+        </div>
+        <div class="form-group">
+          <label for="due">Due Amount</label>
+          <input type="number" class="form-control" id="due" name="due"  [(ngModel)]="due" required disabled="">
+        </div>
+       
+        <div class="form-group">
+          <label for="status">Status</label>
+          <input type="text" class="form-control" id="status" name="status" [(ngModel)]="status" required disabled="">
+        </div>
+        <div class="form-group">
+          <label for="paybill">Pay Bill</label>
+          <input type="number" class="form-control" id="paybill" name="paybill"  [(ngModel)]="paybill" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary mt-2 mb-5">Pay bill</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

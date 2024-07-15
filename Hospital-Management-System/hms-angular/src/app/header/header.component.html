@@ -1,0 +1,75 @@
+
+<!-- top nabvar -->
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <ul class="nav flex-column flex-md-row justify-content-center align-items-center p-3">
+        <li class="nav-item mb-2 mb-md-0 mr-md-2">
+          <button type="button" class="btn btn-link" routerLink="/viewdoctor">
+            <i class="fas fa-user-doctor"></i> Find A Doctor
+          </button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-link" routerLink="/department">
+            <i class="far fa-calendar-check"></i> Make Appointment
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- navbar starts -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="assets\logo\logo1.png" alt="Logo" style="max-height: 50px; max-width: 50px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-white active" aria-current="page" routerLink="/home"
+            routerLinkActive="active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/patient">Patient Service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/DiagnosticServiceComponent">Diagnostic Services</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/aboutBank">Online Reports</a>
+        </li> -->
+
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/aboutBank">Career</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/aboutBank">Contact</a>
+        </li>
+      </ul>
+      <!-- Sign And Login -->
+      <ul class="navbar-nav header ms-auto gap-2 ">
+        <li class="nav-item">
+          <button class="btn bg-transparent text-white h_border" routerLink="/register">Register</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn bg-transparent text-white mr-3 h_border" routerLink="/login">Login</button>
+        </li>
+      </ul>
+      <!-- Sign And Login -->
+      <!-- <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-dark" type="submit">Search</button>
+      </form> -->
+    </div>
+  </div>
+</nav>

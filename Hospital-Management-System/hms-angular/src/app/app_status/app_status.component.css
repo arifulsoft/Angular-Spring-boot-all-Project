@@ -1,0 +1,100 @@
+
+.appointment-form {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.appointment-form h2 {
+  color: #28a745;
+  margin-bottom: 20px;
+}
+.appointment-form label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.appointment-form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+.appointment-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.appointment-form button:hover {
+  background-color: #218838;
+}
+/* css for search */
+
+.my-form {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.my-form label {
+  font-weight: bold;
+}
+
+.my-form input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.my-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.my-form button:hover {
+  background-color: #0056b3;
+}
+
+/* table design */
+.table-container {
+margin: 20px 0;
+}
+
+.table {
+width: 100%;
+border-collapse: collapse;
+border-radius: 8px;
+overflow: hidden;
+}
+
+.table th, .table td {
+padding: 12px 15px;
+text-align: left;
+border-bottom: 1px solid #dee2e6;
+}
+
+.table th {
+background-color: #007bff;
+color: #fff;
+}
+
+.table tr:nth-child(even) {
+background-color: #f8f9fa;
+}
+
+.table tr:hover {
+background-color: #e9ecef;
+}

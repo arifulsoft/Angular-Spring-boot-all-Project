@@ -1,0 +1,105 @@
+<!-- <p>expired works!</p> -->
+<!-- {{expiredList|json}} -->
+ {{returnProduct|json}}
+<div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Serial No</th>
+                    <!-- <th scope="col">Order Id</th> -->
+                    <th scope="col">Invoice No</th>
+                    <th scope="col">Medicine Name</th>
+                    <th scope="col">Generic Phone </th>
+                    <th scope="col">Supplier</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Rate</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+              
+            <tbody>
+                <tr *ngFor="let i of expiredList; let x=index;">
+                    <th scope="row">{{x+1}}</th>
+                    <!-- <td>{{i.orderId}}</td> -->
+                    <td>{{i.invoice}}</td>
+                    <td>{{i.medicineName}}</td>
+                    <td>{{i.genericName}}</td>
+                    <td>{{i.supplier}}</td>
+                    <td>{{i.returnQty}}</td>
+                    <td>{{i.purchaseRate}}</td>
+                    <td>{{i.returnQty*i.purchaseRate}}</td>
+                    <td class="text-center">
+                        <a type="button" style="text-decoration: none;" (click)="addReturnExpiredList(i)"><i class="bi bi-check-lg" style="font-size: 2rem; color: green;"></i></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <!-- <td></td> -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <th scope="row">Total =</th>
+                    <td>{{totalQuantity}}</td>
+                    <td></td>
+                    <td>{{subTotal}}</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h5 class="text-center" style="color: red;">Return List</h5>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Serial No</th>
+                    <!-- <th scope="col">Order Id</th> -->
+                    <th scope="col">Invoice No</th>
+                    <th scope="col">Medicine Name</th>
+                    <th scope="col">Generic Phone </th>
+                    <th scope="col">Supplier</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Rate</th>
+                    <th scope="col">Total</th>
+                    <!-- <th scope="col">Action</th> -->
+                </tr>
+            </thead>
+              
+            <tbody>
+                <tr *ngFor="let i of returnexpiredList; let x=index;">
+                    <th scope="row">{{x+1}}</th>
+                    <!-- <td>{{i.orderId}}</td> -->
+                    <td>{{i.invoice}}</td>
+                    <td>{{i.medicineName}}</td>
+                    <td>{{i.genericName}}</td>
+                    <td>{{i.supplier}}</td>
+                    <td>{{i.returnQty}}</td>
+                    <td>{{i.purchaseRate}}</td>
+                    <td>{{i.returnQty*i.purchaseRate}}</td>
+                    <!-- <td class="text-center">
+                        <a type="button" style="text-decoration: none;" (click)="addReturnExpiredList(i)"><i class="bi bi-check-lg" style="font-size: 2rem; color: green;"></i></a>
+                    </td> -->
+                </tr>
+                <tr>
+                    <td></td>
+                    <!-- <td></td> -->
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <th scope="row">Total =</th>
+                    <td>{{returntotalQuantity}}</td>
+                    <td></td>
+                    <td>{{returnSubtotal}}</td>
+                    <!-- <td></td> -->
+                </tr>
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-end">
+            <button type="button" class="btn btn-outline-primary me-2" (click)="confirmReturn()">Confirm Return</button>
+        </div>
+    </div>
+</div>
